@@ -1,0 +1,55 @@
+<!Doctype html>
+<html>
+    <head>
+    <meta charset="UTF-8">
+    <title>POPUP</title>
+<style>
+    .overlay{
+        background-color: black;
+        height:100%;
+        width: 100%;
+        position: absolute;
+        top: 0%;
+        left: 0%;
+        opacity: 0.8;
+        z-index: 1;
+        display:none;
+        transition: 2s;
+    }
+    .popupbox{
+        position: absolute;
+        z-index: 3;
+        background-color:white;
+        color: black;
+        width: 40%;
+        padding: 20px;
+        border-radius: 10px;
+        left: 30%;
+        display: none;
+    }
+    </style>
+    </head>
+<body>
+    <center>
+<button onclick="show()" style="background-color: yellow; color: black; font-weight: bold;">Show</button></center>
+<div class="overlay"></div>
+<div class="popupbox">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta voluptate animi beatae recusandae, in, ipsam sequi itaque eaque corrupti, praesentium rerum doloremque totam alias quo tempora laborum autem facere eveniet.</p>
+    <button onclick="Delete()">Cancel</button>
+</div>
+<script>
+    var popoverlay=document.querySelector(".overlay")
+    var popbox=document.querySelector(".popupbox")
+    function show(){
+        popbox.style.display="block"
+        popoverlay.style.display="block"
+    }
+    function Delete()
+    {
+        popbox.style.display="none"
+        popoverlay.style.display="none"
+    }
+    
+</script>
+</body>
+</html>
